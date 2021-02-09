@@ -140,7 +140,7 @@ if __name__ == '__main__':
     x = np.random.rand(8, 3, 32, 32).astype(np.float32)
     x = torch.from_numpy(x)
 
-    model = deform_conv_v1(3, 16, 3, 2, 1)
+    model = deform_conv_v1(in_channels=3, out_channels=16, kernel_size=3, stride=2, padding=1)
 
     res = model(x)
     print (res)
